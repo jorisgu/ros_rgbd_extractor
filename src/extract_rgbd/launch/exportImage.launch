@@ -1,0 +1,11 @@
+<launch>
+
+<!-- RECUPERATION FLUX VIDEO -->
+
+    <arg name="format" default="png" />
+    <arg name="flux" default="/dora/kinect/depth/image_rect" />
+    <arg name="path" default="/tmp/image/" />
+
+    <node name="camera" pkg="extract_rgbd" type="extract" args="$(arg format) $(arg flux) $(arg path)" />
+
+</launch>
